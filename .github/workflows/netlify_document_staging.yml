@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm i
+        working-directory: ./docs/
       - uses: jsmrcaga/action-netlify-deploy@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
