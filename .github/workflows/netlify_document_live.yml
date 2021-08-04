@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm i
-        working-directory: ./docs
       - name: Deploying on Netlify Production Environment
         uses: South-Paw/action-netlify-deploy@v1.2.0
         with:
